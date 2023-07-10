@@ -1,0 +1,30 @@
+.pan {
+margin-left: 17%;
+}
+.mortadela{
+	width: 100%;
+	font-weight: bold;
+	color: gray;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-right: 30px;
+	color: Gray;
+}
+.mortadela2{
+	font-weight: bold;
+	color: gray;
+	margin-top: 20px;
+	margin-left: 20px
+}
+.queso{
+margin-left:  20%;
+margin-right: 12%;
+}
+.alin{
+	margin-left: 20px;
+	font-weight: bold;
+}
+.Bellota{
+	text-align: justify;
+}
