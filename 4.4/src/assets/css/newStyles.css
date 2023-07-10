@@ -1,0 +1,54 @@
+
+.contentCol{
+    display: flex;
+    width: 50%;
+    position: relative;
+    
+}
+
+.contentCol > label{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#title{
+    font-weight: 700;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+.toValidate{
+    overflow: hidden;
+    align-self: flex-start;
+    height: 30px;
+    min-width: 30px;
+  
+    margin-left: 10px;
+    border: none;
+    border-bottom: 1px solid #333 ;
+    background-color: #F7F7F7;
+    padding-bottom: 0 ;
+    transition: height .3s;
+    font-size: 16px;
+    flex-flow: 1;
+    width: auto;
+}
+
+.toValidate:hover{
+    border: 1px solid #999;
+    border-bottom: 1px solid #333 ;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toValidate:focus {
+    font-size: 18px;
+    height: 40px;
+    display: block;
+    position: relative;
+    max-width: 150px;
+}
+
+.form-select {
+    cursor: pointer;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAG_4.4</title>
+
+    <link rel="stylesheet" href="src/assets/libraries/boostrap.css">
+
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <link rel="stylesheet" href="src/assets/css/style2.css">
+    <link rel="stylesheet" href="src/assets/css/newStyles.css">
+    <link rel="stylesheet" href="src/assets/css/styleInputCurves.css">
+
+</head>
+<body>
+
+    <!-- *
+          
+      Este es un entorno de definición en donde solamente debería interactuar con el index , la carpeta "Definition" y la carpeta views
+      El documento que usted esta viendo es una plantilla que contiene los templates y etiquetas necesarias para
+      
+    * -->
+    <br>
+    <p><b>CAMBIO de SIGNO</b></p>
+    <div id="mainArtifact" style="max-width: 1200px">
+        <div id="contenedor" class="mainContent">
+         
+        </div>
+    </div>
+    <br>
+    <p>Complete:</p>    
+    <!-- etiquetas necesarias para crear los boards con los inputs -->
+    <div class="inputCurvesAllArtifact" >
+        <div class="element-inputCurves"  data-board="board_0"></div>
+        <div class="element-inputCurves" data-board="board_0"></div>
+    </div>
+    <p>Despues de completar los pares ordenados, sitúe sus correspondientes puntos en el plano cartesiano. Una los puntos Marcados y ponga puntos suspensivos para indicar hacia donde iría la curva si se hubiesen marcado más puntos.</p>
+    <br>
+    <div id="node2"></div>
+
+    <!-- Etiqueta necesaria para crear los cuestionarios -->
+    <div id="mainOwner">
+  <div id="globalContainer" class="" style="display: flex; border-top: 1px solid #000;">
+
+    <div id="oneContainer">
+    </div>
+    
+    <div class="otherContainer">
+    </div>
+
+  </div>
+    </div>
+
+<!-- ******************************* Templates de graficas con inputs ************************************************* -->
+
+    <template id="tmp-inputCurves">
+    <div class="inputArtifact">
+        <div class="inputArtifact__content">
+         <div class="msg d-none">
+             
+         </div>
+         <div class="inputArtifact__inputs">
+              <!-- inputs -->
+           </div>
+           <div class="inputArtifact__board">
+            <!-- board -->
+           </div>
+        </div>
+        <div class="inputArtifact__btn btn-all">
+            <button class="help-btn  buttonSecundary buttonKey d-none "></button>
+            <button class="infinite buttonSecundary  buttonKey" style="margin-left: 10px;"> </button>
+            <button class="inputArtifact__btnReset  buttonSecundary buttonKey">Rehacer curva </button> 
+            <button class="inputArtifact__btnCreateCurve buttonKey" >Crear curva </button>
+        </div>
+     </div>
+    </template>
+
+    <template id = "tmp-coords">
+   <div class="inputArtifact__coord">
+      <span>(</span> <span class = 'defaultCoordX'>x</span> <span>,</span> <math-field class="inputArtifact__inputCoord" virtual-keyboard-mode='onfocus' keypress-sound = "none"></math-field><span>)</span>
+   </div>
+    </template>
+
+<!-- ****************************************************************************************************************** -->
+
+<!-- Templates de formularios y tablas -->
+
+    <template id="globalTemplate">
+     
+<div id="artifact-container" class="d-flex w-100 flex-wrap justify-content-center rounded btn-all artifact-container">
+<div id="content" class="s">
+
+</div>
+<div class="d-flex w-100 flex-wrap justify-content-center  rounded btn-all">
+<div class="d-flex flex-row">
+   <div class="d-flex flex-wrap justify-content-start"></div>
+
+   <button class="reset button-marg buttonSecundary buttonKey" title="Reiniciar"></button>
+   <button class="check button-marg buttonPrimary buttonKey" title="Validar"></button>
+
+</div>
+</div>
+
+</div>
+
+    </template>
+
+    <template id="card-template">
+    <div class="card" style="width:fit-content">
+      <div class="card-header text-center"> Grafíca g</div>
+        <div class="card-body">
+        
+        </div>
+        <div class="defCartesian" data-board="board_1"></div>
+        <div class="card-footer" >
+  
+        </div>
+      </div>
+    </template>
+
+    <template id="tableTemplate">
+
+    <table class="table table-bordered">
+  
+    </table>
+  
+    </template>
+
+    <template id="simpleTemplateInput">
+    <math-field  style =" width:100%;" >
+    
+    </math-field>          
+    
+    </template>
+    
+    <template id="simpleTemplateSelect">
+    <div>
+      <select class="form-select form-control" name="opciones" id="opciones"style="max-width:100%; max-height:100%; border:none; " >   
+
+
+    </div>
+  </select>
+    </template>
+
+    <template id="simpleTemplateRadio">
+    <div class="form-check ml-3 mr-4 mt-1" style="display:inline-block !important; width:fit-content">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+      <label class="form-check-label " for="flexRadioDefault1" >
+        Test
+      </label>
+    </div>
+    </template>
+
+    <template id="template">
+    <div id="artifact"></div>
+    </template>
+    <template id="templateInput">
+      <div class="row">
+        <div id="title" class="d-flex justify-content-start col-12 " >
+        </div>
+        <div id="content"class="d-flex justify-content-between col-12"></div>
+        </div>
+        </div>
+     </template>
+
+     <template id="templateSelect">
+      <div class='row flex-wrap mt-2 d-flex' id="selectq" >
+          <div class=" col-lg-6 col-md-12 col-sm-12">
+            <label for="opciones"></label>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12  d-flex justify-content-start" >
+            <select class="form-select form-control" name="opciones" id="opciones"style="width: fit-content ;max-width:90%;" >   
+         </div>
+         </select>
+      </div>
+   </template>
+
+   <template id="templateCheck">
+       
+    <div class=" row d-flex mt-1" id="radioContainer" >
+       <div class="title col-md-6  justify-content-start">
+ 
+       </div>
+       <div class="content col-6 justify-content-start">
+ 
+       </div>
+    </div>
+ 
+ </template>
+
+<!-- ****************************************************************************************************************** -->
+
+
+<!-- IMPORTACIONES -->
+
+<!-- Librerias -->
+
+<script src="./src/assets/libraries/jsxgraph.js"></script>
+<script src="./src/assets/libraries/MathLive.js"></script>
+<script src="./src/assets/libraries/mathmin.js"></script>
+<script src="./src/assets/libraries/computeEngine.js"></script>
+
+<!-- Motores -->
+
+<script src="./src/engines/mod_G.js"></script>
+<script src="./src/engines/inputsCurves.js"></script>
+<script src="./src/engines/mathKeyboard.js"></script>
+<script src="./src/engines/engineOwner.js"></script>
+<script src="./src/engines/EngineStable.js"></script>
+<!-- builderClasses y definiciones -->
+
+<script src="./src/builderClasses/builderClasses.js"></script>
+<script src="./src/definitions/pag_4.4.js"></script> <!-- *Modificar testDefinition por la pagina que este definiendo -->
+
+</body>
+</html>
